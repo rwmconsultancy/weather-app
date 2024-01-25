@@ -1,7 +1,7 @@
 const request = require('postman-request')
 
 const geoCode = (address, callback) => {
-    const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) + '.json?access_token=pk.eyJ1Ijoic2hhdzIwMDAiLCJhIjoiY2tkZnRhdGltMTc1MDJ6cXFxOWdnM29rMyJ9.OyEwIblYyl5ojAl61IUkvQ&limit=1'
+    const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) + '.json?access_token=<ACCESS_TOKEN>&limit=1'
     // console.log (url)
     request({ url, json: true}, (error, { body }) => {
         if (error) {
